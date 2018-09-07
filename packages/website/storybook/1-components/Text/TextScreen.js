@@ -103,6 +103,18 @@ const TextScreen = () => (
       />
 
       <DocItem
+        label="web"
+        name="ellipsis"
+        typeInfo="?string"
+        description={
+          <AppText>
+            If the text is truncated using numberOfLines, this string is used for the ellipsis.
+            Defaults to <Code>'…'</Code>.
+          </AppText>
+        }
+      />
+
+      <DocItem
         name="importantForAccessibility"
         typeInfo="?enum('auto', 'no', 'no-hide-descendants', 'yes')"
         description={[
@@ -119,7 +131,7 @@ const TextScreen = () => (
       <DocItem
         name="numberOfLines"
         typeInfo="?number"
-        description="Truncates the text with an ellipsis after this many lines. Currently only supports `1`."
+        description="Truncates the text with an ellipsis after this many lines. Nested text elements are treated atomically - they are not truncated."
         example={{
           render: () => <PropNumberOfLines />
         }}

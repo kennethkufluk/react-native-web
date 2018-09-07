@@ -20,6 +20,7 @@ const TextPropTypes = {
   accessibilityTraits: oneOfType([array, string]),
   accessible: bool,
   children: any,
+  ellipsis: string,
   importantForAccessibility: oneOf(['auto', 'no', 'no-hide-descendants', 'yes']),
   numberOfLines: number,
   onBlur: func,
